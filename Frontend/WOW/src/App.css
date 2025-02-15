@@ -1,0 +1,148 @@
+/* App-specific Layout Styles */
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Navigation Styles */
+  .nav-link {
+    color: rgb(75, 85, 99);
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: rgb(59, 130, 246);
+  }
+  
+  .nav-link.active {
+    color: rgb(59, 130, 246);
+    font-weight: 600;
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    padding: 1.5rem;
+    transition: all 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    transform: translateY(-2px);
+  }
+  
+  /* Form Styles */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgb(55, 65, 81);
+    margin-bottom: 0.25rem;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgb(209, 213, 219);
+    border-radius: 0.375rem;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: rgb(59, 130, 246);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  }
+  
+  /* Grid Layout */
+  .grid-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+  
+  @media (min-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Section Styles */
+  .section {
+    padding: 3rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(to right, rgb(59, 130, 246), rgb(37, 99, 235));
+    color: white;
+    padding: 5rem 0;
+  }
+  
+  /* Footer Styles */
+  .footer-link {
+    color: rgb(209, 213, 219);
+    transition: color 0.3s;
+  }
+  
+  .footer-link:hover {
+    color: white;
+  }
+  
+  /* Loading States */
+  .loading {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    background-color: rgb(229, 231, 235);
+    border-radius: 0.25rem;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .5;
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .hide-mobile {
+      display: none;
+    }
+  }
+  
+  /* Animation Classes */
+  .slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
